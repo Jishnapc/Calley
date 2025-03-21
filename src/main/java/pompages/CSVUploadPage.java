@@ -1,21 +1,26 @@
 package pompages;
 
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CSVUploadPage {
 
-
+	WebDriverWait wait;
 	public CSVUploadPage(WebDriver driver)
 	{
 		PageFactory.initElements(driver,this);
-
+		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
 	}
+
 
 	@FindBy(id="ContentPlaceHolder1_txtlistname")
 	private WebElement listNameInput;
@@ -41,7 +46,7 @@ public class CSVUploadPage {
 
 	@FindBy(id="ddlbelongto_1")
 	private WebElement belongDropdwnFirst;
-	
+
 	@FindBy(id="ddlbelongto_2")
 	private WebElement belongDropdwn2;
 	@FindBy(id="ddlbelongto_3")
@@ -52,13 +57,13 @@ public class CSVUploadPage {
 
 	@FindBy(id="ContentPlaceHolder1_btnUpload")
 	private WebElement importDataBTN;
-	
+
 	public void enterListName(String listName) {
 		listNameInput.sendKeys(listName);
 	}
 	@FindBy(xpath="//button[@class=\"confirm\"]")
 	private WebElement okBtn;
-	
+
 	public void selectAgent() {
 
 		sellectDropDown.click();
@@ -66,10 +71,9 @@ public class CSVUploadPage {
 	}
 	public void selectAllClick() throws InterruptedException {
 
-		sellectAllCB.click();
-		Thread.sleep(1000);
-		callText.click();
-		System.out.println("clicked");;
+		wait.until(ExpectedConditions.elementToBeClickable(sellectAllCB)).click();
+		wait.until(ExpectedConditions.elementToBeClickable(callText)).click();
+
 
 	}
 
@@ -102,28 +106,32 @@ public class CSVUploadPage {
 		outsideMatchClick();
 	}
 	public void secondDropdownClickAndSelectPhone() throws InterruptedException {
-		 belongDropdwn2.click();
+		belongDropdwn2.click();
 		Thread.sleep(1000);
 		Select select = new Select(belongDropdwn2);
 		select.selectByVisibleText("Phone");
 		outsideMatchClick();
 	}
 	public void thirdDropdownClickAndSelectNotes() throws InterruptedException {
-		 belongDropdwn3.click();
+		belongDropdwn3.click();
 		Thread.sleep(1000);
 		Select select = new Select(belongDropdwn3);
 		select.selectByVisibleText("Notes");
 		outsideMatchClick();
 	}
-	
-	
-	public void importDataClick() throws InterruptedException {
-		importDataBTN.click();
-		Thread.sleep(1000);
-		okBtn.click();
-		
-	}
-	}
 
-	
+
+	public void importDataClick() throws InterruptedException {
+		//		importDataBTN.click();
+		//		Thread.sleep(1000);
+		//		okBtn.click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(importDataBTN)).click();
+
+		// Wait for the OK button to appear/clickable
+		wait.until(ExpectedConditions.elementToBeClickable(okBtn)).click();
+	}
+}
+
+
 

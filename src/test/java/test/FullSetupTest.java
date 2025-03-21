@@ -22,9 +22,10 @@ public class FullSetupTest extends BaseClass {
 		Reporter.log("FullSetupTest",true);
 		
         LoginPage loginPage=new LoginPage(driver);
- 		loginPage.setEmail("pcj@gmail.com");
-		loginPage.setPassword("test468");
-		loginPage.clickLoginButton();
+ 		String Email="pcj@gmail.com";
+		String Password="test468";
+		loginPage.login(Email,Password);
+//		loginPage.clickLoginButton();
 			
 //		boolean result = loginPage.verifyErrMsgIsDisplayed(wait);
 //		Assert.assertTrue(result);

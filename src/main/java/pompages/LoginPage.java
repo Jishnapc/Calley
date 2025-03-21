@@ -31,21 +31,23 @@ public class LoginPage {
 	
 	
 	
-	public void setEmail(String email)
-	{
-		emailTB.sendKeys(email);
-	}
+//	public void setEmail(String email)
+//	{
+//		emailTB.sendKeys(email);
+//	}
+//	
+//	public void setPassword(String pw)
+//	{
+//		pwTB.sendKeys(pw);
+//	}
+//	
+//	public void clickLoginButton()
+//	{
+//		loginBTN.click();
+//	}
 	
-	public void setPassword(String pw)
-	{
-		pwTB.sendKeys(pw);
-	}
-	
-	public void clickLoginButton()
-	{
-		loginBTN.click();
-	}
-	
+      
+    
 	public boolean verifyErrMsgIsDisplayed(WebDriverWait wait )
 	{
 		try
@@ -59,6 +61,12 @@ public class LoginPage {
 			System.out.println("Err Msg is Not displayed");
      		return false;
 		}
+	}
+	public void login(String email, String password) {
+
+        emailTB.sendKeys(email);
+        pwTB.sendKeys(password);
+        loginBTN.click();
 	}
 
 }
