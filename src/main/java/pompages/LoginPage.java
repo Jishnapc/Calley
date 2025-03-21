@@ -26,7 +26,7 @@ public class LoginPage {
 	@FindBy(id="btnLogIn")
 	private WebElement loginBTN;
 	
-	@FindBy(xpath="/html/body/div[2]/h2")
+	@FindBy(xpath="//div[@class=\"sa-icon sa-warning pulseWarning\"]")
 	private WebElement errMsg;
 	
 	
@@ -46,19 +46,19 @@ public class LoginPage {
 		loginBTN.click();
 	}
 	
-//	public boolean verifyErrMsgIsDisplayed(WebDriverWait wait )
-//	{
-//		try
-//		{
-//			wait.until(ExpectedConditions.visibilityOf(errMsg));
-//			System.out.println("Err Msg is displayed");
-//			return true;
-//		}
-//		catch (Exception e) 
-//		{
-//			System.out.println("Err Msg is Not displayed");
-//     		return false;
-//		}
-//	}
+	public boolean verifyErrMsgIsDisplayed(WebDriverWait wait )
+	{
+		try
+		{
+			wait.until(ExpectedConditions.visibilityOf(errMsg));
+			System.out.println("Err Msg is displayed");
+			return true;
+		}
+		catch (Exception e) 
+		{
+			System.out.println("Err Msg is Not displayed");
+     		return false;
+		}
+	}
 
 }

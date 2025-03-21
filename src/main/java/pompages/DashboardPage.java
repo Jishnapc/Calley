@@ -17,27 +17,27 @@ public class DashboardPage {
 	{
 		PageFactory.initElements(driver,this);
 		actions = new Actions(driver);
-		 wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	}
 
 	@FindBy(xpath="//span[@id=\"ContentPlaceHolder1_lbl_title\"]")
 	private WebElement dashboard;
-	
-	@FindBy(xpath="//*[@id=\"nav\"]/li[5]/a")
+
+	@FindBy(xpath="//span[text()=\"Team\"]")
 	private WebElement dropDownMenu;
 
 	@FindBy(xpath="//*[@id=\"nav\"]/li[5]/ul/li[2]/a")
 	private WebElement agent;
-	
 
-	
+
+
 	@FindBy(xpath = "//span[text()='Call List ']")
-    private WebElement callListMenu;
+	private WebElement callListMenu;
 
-    @FindBy(xpath = "//*[@id=\"nav\"]/li[2]/ul/li[1]/a/span")
-    private WebElement addPowerImport;
+	@FindBy(xpath = "//span[text()=\"Add - Power Import\"]")
+	private WebElement addPowerImport;
 
-   
+
 
 	public void hoverOverTeams() 
 	{
@@ -47,21 +47,19 @@ public class DashboardPage {
 	public void clickAgent() {
 		agent.click();
 	}
-	
-	
-	 public void hoverOverCallList()   
-		{  
-	    	
-//	    	WebElement callist = wait.until(ExpectedConditions.visibilityOfElementLocated( callListMenu));
-//		 Thread.sleep(20000);
-	        actions.moveToElement(callListMenu).perform(); 
-//	        wait.until(ExpectedConditions.elementToBeClickable(addPowerImport)).click();
-	        
-		}
-		public void clickPowerImport() {
-			addPowerImport.click();
-		}
-		
+
+
+	public void hoverOverCallList()   
+	{  
+
+		actions.moveToElement(callListMenu).perform(); 
+
+
+	}
+	public void clickPowerImport() {
+		addPowerImport.click();
+	}
+
 	public boolean verifyDashBoardPageIsDisplayed(WebDriverWait wait)
 	{
 		try

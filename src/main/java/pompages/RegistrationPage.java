@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class RegistrationPage {
 	public JavascriptExecutor driver;
+	
 	@FindBy(id="txtName")
 	private WebElement unTB;
 
@@ -23,23 +24,27 @@ public class RegistrationPage {
 	private WebElement mbTB;
 
 
-
 	@FindBy(xpath = "//iframe[contains(@title,'reCAPTCHA')]")
 	private WebElement recaptchaIframe;
 
 	@FindBy(xpath = "//div[@class='recaptcha-checkbox-border']")
 	private WebElement recaptchaCheckbox;
 
-	//	@FindBy(xpath = "//label[@class=\"text-muted\"]")
-	//	private WebElement acceptLB;
+	
 
-	@FindBy(xpath="/html/body/form/div[3]/div/div[2]/div/div/div/div[1]/div[9]/div/input")
+	@FindBy(id="checkbox-signup")
 	private WebElement acceptCB;
 
 	@FindBy(id="btnSignUp")
 	private WebElement signupBTN;
-
-
+	
+	@FindBy(xpath = "//h1[contains(text(),'Try Calley for Free')]")
+	WebElement heading;
+	
+	
+	@FindBy(xpath = "//div[@class=\"sa-icon sa-warning pulseWarning\"]")
+	WebElement errMsg;
+	
 
 	public RegistrationPage(WebDriver driver)
 	{
@@ -68,8 +73,7 @@ public class RegistrationPage {
 		mbTB.sendKeys(mn);
 	}
 
-	@FindBy(xpath = "//h1[contains(text(),'Try Calley for Free')]")
-	WebElement heading;
+
 	
 	
 	public void handleRecaptcha(WebDriver driver) {
@@ -99,23 +103,18 @@ public class RegistrationPage {
 	{
 		signupBTN.click();
 	}
-
-	//	public boolean verifyErrMsgIsDisplayed(WebDriverWait wait)
-	//	{
-	//		try
-	//		{
-	//			wait.until(ExpectedConditions.visibilityOf(errMsg));
-	//			System.out.println("Err Msg is displayed");
-	//			return true;
-	//		}
-	//		catch (Exception e) 
-	//		{
-	//			System.out.println("Err Msg is Not displayed");
-	//			return false;
-	//		}
-	//	}
-
-//	public boolean verifyRegistrationRedirection(WebDriverWait wait)
-//	{
-	
+	public boolean verifyErrMsgIsDisplayed(WebDriverWait wait )
+	{
+		try
+		{
+			wait.until(ExpectedConditions.visibilityOf(errMsg));
+			System.out.println("Err Msg is displayed");
+			return true;
+		}
+		catch (Exception e) 
+		{
+			System.out.println("Err Msg is Not displayed");
+     		return false;
+		}
+	}
 	}
