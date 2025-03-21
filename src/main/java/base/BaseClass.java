@@ -3,11 +3,11 @@ package base;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
+
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
-import base.Utility;
-
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -53,55 +53,62 @@ public class BaseClass {
 			if(browser.equalsIgnoreCase("chrome"))// chrome or not
 			{
 				ChromeOptions options=new ChromeOptions();
-				
+
 				driver=new RemoteWebDriver(url,options);
 			}
 			else
 			{  
 				EdgeOptions options=new EdgeOptions();
-			    driver=new RemoteWebDriver(url,options);
-	  	     }
-	    }
-	    else
-	    {
-		
-		switch(browser) {
-		case "chrome"  :{
-			ChromeOptions options=new ChromeOptions();
-			options.addArguments("--disable-notifications");
-			driver=new ChromeDriver(options);
-			break;
+				driver=new RemoteWebDriver(url,options);
+			}
+		}
+		else
+		{
+
+			switch(browser) {
+			case "chrome"  :{
+				ChromeOptions options=new ChromeOptions();
+				options.addArguments("--disable-notifications");
+				driver=new ChromeDriver(options);
+				break;
+			}
+
+			case "edge"    :{
+				driver=new EdgeDriver();
+				break;
+			}
+			}
 		}
 
-		case "edge"    :{
-			driver=new EdgeDriver();
-			break;
-		}
-		}
+
+		Reporter.log("Set ITO:"+ITO,true);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Integer.valueOf(ITO)));
+		//
+		//	String appURL=Utility.getProperty("src\\main\\resources\\resources.properties", "app_url");
+		//	Reporter.log("Enter the URL:"+appURL,true);
+		//	driver.get(appURL);
+		//
+		String apploginURL=Utility.getProperty("src\\main\\resources\\resources.properties", "applogin_url");
+		Reporter.log("Enter the URL:"+apploginURL,true);
+		driver.get(apploginURL);
+
+
+		Reporter.log("Maximize the browser",true);
+		driver.manage().window().maximize();
+
+		Reporter.log("Set ETO:"+ETO,true);
+		wait=new WebDriverWait(driver, Duration.ofSeconds(Integer.valueOf(ETO)));
+
+
 	}
+
+	@AfterMethod
+	public void postCondition(ITestResult result) throws Exception
+	{
 		
-
-	Reporter.log("Set ITO:"+ITO,true);
-	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Integer.valueOf(ITO)));
-//
-//	String appURL=Utility.getProperty("src\\main\\resources\\resources.properties", "app_url");
-//	Reporter.log("Enter the URL:"+appURL,true);
-//	driver.get(appURL);
-//
-	String apploginURL=Utility.getProperty("src\\main\\resources\\resources.properties", "applogin_url");
-	Reporter.log("Enter the URL:"+apploginURL,true);
-    driver.get(apploginURL);
-
-
-	Reporter.log("Maximize the browser",true);
-	driver.manage().window().maximize();
-
-	Reporter.log("Set ETO:"+ETO,true);
-	wait=new WebDriverWait(driver, Duration.ofSeconds(Integer.valueOf(ETO)));
 	
-
-}
-  
-
+		Reporter.log("Close the browser",true);
+		driver.quit();
+	}
 }
 

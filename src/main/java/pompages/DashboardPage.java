@@ -38,7 +38,6 @@ public class DashboardPage {
 	private WebElement addPowerImport;
 
 
-
 	public void hoverOverTeams() 
 	{
 

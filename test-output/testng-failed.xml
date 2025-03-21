@@ -7,6 +7,7 @@
         <methods>
           <include name="testFullSetupTest"/>
           <include name="preCondition"/>
+          <include name="postCondition"/>
         </methods>
       </class> <!-- test.FullSetupTest -->
     </classes>

@@ -57,41 +57,22 @@ public class CSVUploadPage {
 
 	@FindBy(id="ContentPlaceHolder1_btnUpload")
 	private WebElement importDataBTN;
-
-	public void enterListName(String listName) {
-		listNameInput.sendKeys(listName);
-	}
 	@FindBy(xpath="//button[@class=\"confirm\"]")
 	private WebElement okBtn;
 
-	public void selectAgent() {
 
+	public void addDetails(String listName,String fpath) throws InterruptedException {
+		
+		listNameInput.sendKeys(listName);
 		sellectDropDown.click();
-
-	}
-	public void selectAllClick() throws InterruptedException {
-
 		wait.until(ExpectedConditions.elementToBeClickable(sellectAllCB)).click();
 		wait.until(ExpectedConditions.elementToBeClickable(callText)).click();
-
-
-	}
-
-	public void chooseFile(String fpath) {
-
 		chooseBtn.sendKeys(fpath);
-	}
-	public void uploadBtnClick() {
-
 		uploadBtn.click();
-
+		Thread.sleep(1000);
+		confirmBtn.click(); 
 	}
 
-
-	public void confirmBtnClick() {
-		confirmBtn.click();
-
-	}
 	public void outsideMatchClick() {
 
 		matchFieldTXT.click();
@@ -122,13 +103,8 @@ public class CSVUploadPage {
 
 
 	public void importDataClick() throws InterruptedException {
-		//		importDataBTN.click();
-		//		Thread.sleep(1000);
-		//		okBtn.click();
 
 		wait.until(ExpectedConditions.elementToBeClickable(importDataBTN)).click();
-
-		// Wait for the OK button to appear/clickable
 		wait.until(ExpectedConditions.elementToBeClickable(okBtn)).click();
 	}
 }
