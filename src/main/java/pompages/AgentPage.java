@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class AgentPage {
@@ -18,6 +18,7 @@ public class AgentPage {
 	{
 		PageFactory.initElements(driver,this);
 		actions = new Actions(driver);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		 
 	
 	}
@@ -56,16 +57,15 @@ public class AgentPage {
         mobileTB.sendKeys(mobile);
         emailTB.sendKeys(email);
         passwordTB.sendKeys(password);
-        submitButton.click();
+//        submitButton.click();
+        wait.until(ExpectedConditions.elementToBeClickable(submitButton)).click();
+		wait.until(ExpectedConditions.elementToBeClickable(conformBTN)).click();
       
     }
-    public void clickConformButton()
-	{
-    	conformBTN.click();
-	}
-  
-    
-   
+//    public void clickConformButton()
+//	{
+//    	conformBTN.click();
+//	}  
 	
     public boolean verifyAgentAdded(String expectedName, String expectedEmail) {
         String actualName = agentName.getText();

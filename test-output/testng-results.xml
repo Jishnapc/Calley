@@ -26,12 +26,12 @@
       <![CDATA[Close the browser]]>
     </line>
   </reporter-output>
-  <suite started-at="2025-03-21T20:53:09 IST" name="Default suite" finished-at="2025-03-21T20:53:36 IST" duration-ms="26979">
+  <suite started-at="2025-03-21T22:27:49 IST" name="Default suite" finished-at="2025-03-21T22:28:24 IST" duration-ms="35222">
     <groups>
     </groups>
-    <test started-at="2025-03-21T20:53:09 IST" name="Default test" finished-at="2025-03-21T20:53:36 IST" duration-ms="26979">
+    <test started-at="2025-03-21T22:27:49 IST" name="Default test" finished-at="2025-03-21T22:28:24 IST" duration-ms="35222">
       <class name="test.FullSetupTest">
-        <test-method is-config="true" signature="preCondition(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:test.FullSetupTest@55183b20]" started-at="2025-03-21T20:53:09 IST" name="preCondition" finished-at="2025-03-21T20:53:16 IST" duration-ms="6401" status="PASS">
+        <test-method is-config="true" signature="preCondition(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:test.FullSetupTest@55183b20]" started-at="2025-03-21T22:27:49 IST" name="preCondition" finished-at="2025-03-21T22:27:54 IST" duration-ms="5470" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -80,14 +80,14 @@
             </line>
           </reporter-output>
         </test-method> <!-- preCondition -->
-        <test-method signature="testFullSetupTest()[pri:0, instance:test.FullSetupTest@55183b20]" started-at="2025-03-21T20:53:16 IST" name="testFullSetupTest" finished-at="2025-03-21T20:53:36 IST" duration-ms="20126" status="PASS">
+        <test-method signature="testFullSetupTest()[pri:0, instance:test.FullSetupTest@55183b20]" started-at="2025-03-21T22:27:54 IST" name="testFullSetupTest" finished-at="2025-03-21T22:28:23 IST" duration-ms="29123" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[FullSetupTest]]>
             </line>
           </reporter-output>
         </test-method> <!-- testFullSetupTest -->
-        <test-method is-config="true" signature="postCondition(org.testng.ITestResult)[pri:0, instance:test.FullSetupTest@55183b20]" started-at="2025-03-21T20:53:36 IST" name="postCondition" finished-at="2025-03-21T20:53:36 IST" duration-ms="414" status="PASS">
+        <test-method is-config="true" signature="postCondition(org.testng.ITestResult)[pri:0, instance:test.FullSetupTest@55183b20]" started-at="2025-03-21T22:28:23 IST" name="postCondition" finished-at="2025-03-21T22:28:24 IST" duration-ms="565" status="PASS">
           <params>
             <param index="0">
               <value>
