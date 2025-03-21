@@ -25,7 +25,7 @@ public class FullSetupTest extends BaseClass {
  		String Email="pcj@gmail.com";
 		String Password="test468";
 		loginPage.login(Email,Password);
-//		loginPage.clickLoginButton();
+
 			
 //		boolean result = loginPage.verifyErrMsgIsDisplayed(wait);
 //		Assert.assertTrue(result);

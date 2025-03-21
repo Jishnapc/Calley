@@ -29,24 +29,6 @@ public class LoginPage {
 	@FindBy(xpath="//div[@class=\"sa-icon sa-warning pulseWarning\"]")
 	private WebElement errMsg;
 	
-	
-	
-//	public void setEmail(String email)
-//	{
-//		emailTB.sendKeys(email);
-//	}
-//	
-//	public void setPassword(String pw)
-//	{
-//		pwTB.sendKeys(pw);
-//	}
-//	
-//	public void clickLoginButton()
-//	{
-//		loginBTN.click();
-//	}
-	
-      
     
 	public boolean verifyErrMsgIsDisplayed(WebDriverWait wait )
 	{
