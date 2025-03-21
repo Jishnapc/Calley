@@ -5,7 +5,7 @@ import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import base.BaseClass;
-import base.Utility;
+
 import pompages.RegistrationPage;
 import pompages.AgentPage;
 import pompages.CSVUploadPage;
@@ -52,14 +52,20 @@ public class FullSetupTest extends BaseClass {
 		
 		CSVUploadPage csvPage=new CSVUploadPage(driver);
 		
-         csvPage.enterListName("testlist3");
+         csvPage.enterListName("t");
          csvPage.selectAgent();
          csvPage.selectAllClick();
-         csvPage.outsideClick();
+
          csvPage.chooseFile("C:\\Users\\jishnaabhilash\\Downloads\\Sample File cCopy.csv");
          csvPage.uploadBtnClick();
          Thread.sleep(10000);
          csvPage.confirmBtnClick();
+         csvPage.firstDropdownClickAndSelectFN();
+         csvPage.secondDropdownClickAndSelectPhone();
+         csvPage.thirdDropdownClickAndSelectNotes();
+         csvPage.importDataClick();
+           
+         
 
 }
 }

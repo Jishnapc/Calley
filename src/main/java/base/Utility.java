@@ -14,9 +14,6 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
 
 public class Utility {
 
@@ -74,21 +71,4 @@ public class Utility {
 		}
 		return value;
 	}
-	
-//	public static String getValueFromCSV(String filePath, String searchKey) {
-//        String line;
-//        String csvSplitBy = ","; // Assuming CSV is comma-separated
-//        
-//        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
-//            while ((line = br.readLine()) != null) {
-//                String[] values = line.split(csvSplitBy);
-//                if (values.length >= 2 && values[0].trim().equalsIgnoreCase(searchKey)) {
-//                    return values[1].trim(); // Return the value corresponding to the key
-//                }
-//            }
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        return null; // Return null if key is not found
-//    }
 }
