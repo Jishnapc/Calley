@@ -50,10 +50,7 @@ public class AgentPage {
  
     @FindBy(xpath = "//button[@class=\"confirm\"]")  
     private WebElement conformBTN;
-    
-    //
     	
-    
     public void addAgent(String name, String mobile, String email, String password) {
         nameTB.sendKeys(name);
         mobileTB.sendKeys(mobile);
