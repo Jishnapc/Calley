@@ -16,14 +16,14 @@ public class RegistratinTest extends BaseClass {
 	{
 		Reporter.log("RegistratinTest",true);
         RegistrationPage registrationPage=new RegistrationPage(driver);
-//        String name= Utility.getProperty("src\\main\\resources\\login.csv", "firstname");
-//        registrationPage.setUserName("Tia");
-//        registrationPage.setEmail("Ta.pc@gmail.com");
-//        registrationPage.setPassword("test123");
-//        registrationPage.setMobile("0041181956");
-//        registrationPage.handleRecaptcha(driver);
-//        Thread.sleep(20000);
-//        registrationPage.setAccept();
+
+        registrationPage.setUserName("Tiadu");
+        registrationPage.setEmail("Taerdu@gmail.com");
+        registrationPage.setPassword("test123");
+        registrationPage.setMobile("0041181956");
+        registrationPage.handleRecaptcha(driver);
+        Thread.sleep(20000);
+        registrationPage.setAccept();
         registrationPage.clickSignupButton(); 
         
        Assert.assertTrue(registrationPage.verifyErrMsgIsDisplayed(wait)," Registration is not successful");

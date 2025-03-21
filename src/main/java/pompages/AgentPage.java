@@ -57,15 +57,11 @@ public class AgentPage {
         mobileTB.sendKeys(mobile);
         emailTB.sendKeys(email);
         passwordTB.sendKeys(password);
-//        submitButton.click();
+
         wait.until(ExpectedConditions.elementToBeClickable(submitButton)).click();
 		wait.until(ExpectedConditions.elementToBeClickable(conformBTN)).click();
       
     }
-//    public void clickConformButton()
-//	{
-//    	conformBTN.click();
-//	}  
 	
     public boolean verifyAgentAdded(String expectedName, String expectedEmail) {
         String actualName = agentName.getText();
