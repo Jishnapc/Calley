@@ -18,7 +18,7 @@ public class FullSetupTest extends BaseClass {
 	@DataProvider(name = "loginScenarios")
     public Object[][] getLoginScenarios() {
         return new Object[][] {
-            { "jishna.abhilash86@gmail.com", "123456", "valid", "SampleTestList1", "C:\\Users\\jishnaabhilash\\Downloads\\Sample File cCopy.csv" },
+            { "jishna.abhilash86@gmail.com", "123456", "valid", "SampleTestList4", "C:\\Users\\jishnaabhilash\\Downloads\\Sample File cCopy.csv" },
             { "wrong@email.com", "wrongpass", "invalid","",""}
         };
 	 }
@@ -49,9 +49,9 @@ public class FullSetupTest extends BaseClass {
 	        dashboardPage.clickAgent();
 
 	        AgentPage agentPage = new AgentPage(driver);
-	        String agentName = "Abhi";
-	        String mobile = "8689745641";
-	        String agentEmail ="jishvavaabhi@gmail.com";
+	        String agentName = "Abhila";
+	        String mobile = "8689745647";
+	        String agentEmail ="jishvavaabhila@gmail.com";
 	        String agentPassword = "Testist23559";
 
 	        agentPage.addAgent(agentName, mobile, agentEmail, agentPassword);
