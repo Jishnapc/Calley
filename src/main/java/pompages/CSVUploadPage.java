@@ -49,7 +49,7 @@ public class CSVUploadPage {
 	@FindBy(xpath="//button[@class=\"confirm\"]")
 	private WebElement okBtn;
 
-
+//Add File details and FileUpload
 	public void addDetails(String listName,String fpath) throws InterruptedException {
 		
 		listNameInput.sendKeys(listName);
@@ -68,6 +68,7 @@ public class CSVUploadPage {
 		System.out.println("clicked");
 
 	} 
+//Select BelongListDropdown
 	public void selectFromDropdown(String dropdownName, String visibleText)  {
         WebElement dropdownElement = null;
 
@@ -85,7 +86,6 @@ public class CSVUploadPage {
                 throw new IllegalArgumentException("Invalid dropdown name: " + dropdownName);
         }
 
-       
         wait.until(ExpectedConditions.elementToBeClickable(dropdownElement)).click();
 
         Select select = new Select(dropdownElement);
@@ -93,7 +93,7 @@ public class CSVUploadPage {
 
         outsideMatchClick(); 
     }
-
+//Import Click
 	public void importDataClick() throws InterruptedException {
 		wait.until(ExpectedConditions.elementToBeClickable(importDataBTN)).click();
 		wait.until(ExpectedConditions.elementToBeClickable(okBtn)).click();

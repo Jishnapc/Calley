@@ -15,8 +15,7 @@ public class LoginPage {
 	{
 		PageFactory.initElements(driver,this);
 	}
-	
-	
+		
 	@FindBy(id="txtEmailId")
 	private WebElement emailTB;
 
@@ -29,7 +28,7 @@ public class LoginPage {
 	@FindBy(xpath="//div[contains(@class,'sweet-alert') and contains(@class,'visible')]")
 	private WebElement errMsg;
 	
-    
+    // Login Eror
 	public boolean verifyErrMsgIsDisplayed(WebDriverWait wait )
 	{
 		try
@@ -44,6 +43,7 @@ public class LoginPage {
      		return false;
 		}
 	}
+	// login with email.password
 	public void login(String email, String password) {
 
         emailTB.sendKeys(email);

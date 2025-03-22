@@ -22,43 +22,36 @@ public class DashboardPage {
 
 	@FindBy(id="ContentPlaceHolder1_lbl_title")
 	private WebElement dashboard;
-
 	@FindBy(xpath="//span[text()=\"Team\"]")
 	private WebElement dropDownMenu;
-
 	@FindBy(xpath="//*[@id=\"nav\"]/li[5]/ul/li[2]/a")
 	private WebElement agent;
-
-
-
 	@FindBy(xpath = "//span[text()='Call List ']")
 	private WebElement callListMenu;
-
 	@FindBy(xpath = "//span[text()=\"Add - Power Import\"]")
 	private WebElement addPowerImport;
 
-
+//mouse over TeamsTab
 	public void hoverOverTeams() 
 	{
 
 		actions.moveToElement(dropDownMenu).perform();
 	}
+//Click agent DropDown
 	public void clickAgent() {
 		agent.click();
 	}
 
-
+//Mousehover CallList
 	public void hoverOverCallList()   
 	{  
-
 		actions.moveToElement(callListMenu).perform(); 
-
-
 	}
+//Click AddImpotPowr
 	public void clickPowerImport() {
 		addPowerImport.click();
 	}
-
+//Verification of DashBoard
 	public boolean verifyDashBoardPageIsDisplayed(WebDriverWait wait)
 	{
 		try
