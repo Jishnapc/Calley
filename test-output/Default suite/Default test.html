@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Mar 21 23:21:38 IST 2025</td>
+<td>Started on:</td><td>Sat Mar 22 11:32:02 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>45 seconds (45807 ms)</td>
+<tr><td>Total time:</td><td>68 seconds (68957 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,19 +76,19 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='test.RegistratinTest.testRegistratinTest()'><b>testRegistratinTest</b><br>Test class: test.RegistratinTest<br/>
-<a href="#Output-1056185446" onClick='toggleBox("Output-1056185446", this, "Show output", "Hide output");'>Show output</a>
+<td title='test.FullSetupTest.testLoginFlow()'><b>testLoginFlow</b><br>Test class: test.FullSetupTest<br>Parameters: jishna.abhilash86@gmail.comb, 123456, valid, ListTest, C:\Users\jishnaabhilash\Downloads\Sample File cCopy.csv<br/>
+<a href="#Output-49547843" onClick='toggleBox("Output-49547843", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1056185446" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1056185446">
-RegistratinTest<br/>
+<a href="#Output-49547843" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-49547843">
+Running Login Scenario: valid<br/>
 </div>
 </td>
-<td><div><pre>java.lang.AssertionError:  Registration is not successful expected [true] but found [false]
+<td><div><pre>java.lang.AssertionError: Dashboard should be visible after valid login expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertTrue(Assert.java:57)
-	at test.RegistratinTest.testRegistratinTest(RegistratinTest.java:29)
+	at test.FullSetupTest.testLoginFlow(FullSetupTest.java:94)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -115,12 +115,12 @@ RegistratinTest<br/>
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1056185446", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1056185446'><pre>java.lang.AssertionError:  Registration is not successful expected [true] but found [false]
+</pre></div><a href='#' onClick='toggleBox("stack-trace49547843", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace49547843'><pre>java.lang.AssertionError: Dashboard should be visible after valid login expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertTrue(Assert.java:57)
-	at test.RegistratinTest.testRegistratinTest(RegistratinTest.java:29)
+	at test.FullSetupTest.testLoginFlow(FullSetupTest.java:94)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -148,8 +148,29 @@ RegistratinTest<br/>
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>38</td>
-<td>test.RegistratinTest@55183b20</td></tr>
+<td>15</td>
+<td>test.FullSetupTest@4c371370</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='test.FullSetupTest.testLoginFlow()'><b>testLoginFlow</b><br>Test class: test.FullSetupTest<br>Parameters: wrong@email.com, wrongpass, invalid, , <br/>
+<a href="#Output-78265654" onClick='toggleBox("Output-78265654", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-78265654" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-78265654">
+Running Login Scenario: invalid<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>test.FullSetupTest@4c371370</td></tr>
 </table><p>
 </body>
 </html>

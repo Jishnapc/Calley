@@ -17,7 +17,7 @@ public class CSVUploadPage {
 	public CSVUploadPage(WebDriver driver)
 	{
 		PageFactory.initElements(driver,this);
-		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
 	}
 
@@ -67,33 +67,39 @@ public class CSVUploadPage {
 		matchFieldTXT.click();
 		System.out.println("clicked");
 
-	}
-	public void firstDropdownClickAndSelectFN() throws InterruptedException {
-		belongDropdwnFirst.click();
-		Thread.sleep(1000);
-		Select select = new Select(belongDropdwnFirst);
-		select.selectByVisibleText("FirstName");
-		outsideMatchClick();
-	}
-	public void secondDropdownClickAndSelectPhone() throws InterruptedException {
-		belongDropdwn2.click();
-		Thread.sleep(1000);
-		Select select = new Select(belongDropdwn2);
-		select.selectByVisibleText("Phone");
-		outsideMatchClick();
-	}
-	public void thirdDropdownClickAndSelectNotes() throws InterruptedException {
-		belongDropdwn3.click();
-		Thread.sleep(1000);
-		Select select = new Select(belongDropdwn3);
-		select.selectByVisibleText("Notes");
-		outsideMatchClick();
-	}
+	} 
+	public void selectFromDropdown(String dropdownName, String visibleText)  {
+        WebElement dropdownElement = null;
+
+        switch (dropdownName.toLowerCase()) {
+            case "first":
+                dropdownElement = belongDropdwnFirst;
+                break;
+            case "second":
+                dropdownElement = belongDropdwn2;
+                break;
+            case "third":
+                dropdownElement = belongDropdwn3;
+                break;
+            default:
+                throw new IllegalArgumentException("Invalid dropdown name: " + dropdownName);
+        }
+
+       
+        wait.until(ExpectedConditions.elementToBeClickable(dropdownElement)).click();
+
+        Select select = new Select(dropdownElement);
+        select.selectByVisibleText(visibleText);
+
+        outsideMatchClick(); 
+    }
 
 	public void importDataClick() throws InterruptedException {
 		wait.until(ExpectedConditions.elementToBeClickable(importDataBTN)).click();
 		wait.until(ExpectedConditions.elementToBeClickable(okBtn)).click();
 	}
+
+	
 }
 
 

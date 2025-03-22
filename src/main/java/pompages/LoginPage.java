@@ -26,7 +26,7 @@ public class LoginPage {
 	@FindBy(id="btnLogIn")
 	private WebElement loginBTN;
 	
-	@FindBy(xpath="//h2[text()='Enter Email Id.']")
+	@FindBy(xpath="//div[contains(@class,'sweet-alert') and contains(@class,'visible')]")
 	private WebElement errMsg;
 	
     

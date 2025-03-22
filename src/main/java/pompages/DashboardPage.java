@@ -20,7 +20,7 @@ public class DashboardPage {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	}
 
-	@FindBy(xpath="//h4[@class=\"page-title\"]")
+	@FindBy(id="ContentPlaceHolder1_lbl_title")
 	private WebElement dashboard;
 
 	@FindBy(xpath="//span[text()=\"Team\"]")
