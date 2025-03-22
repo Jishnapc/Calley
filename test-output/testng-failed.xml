@@ -5,7 +5,7 @@
     <classes>
       <class name="test.FullSetupTest">
         <methods>
-          <include name="testLoginFlow" invocation-numbers="0"/>
+          <include name="testLoginFlow" invocation-numbers="0 1"/>
           <include name="preCondition"/>
           <include name="postCondition"/>
         </methods>
