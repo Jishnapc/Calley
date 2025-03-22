@@ -48,32 +48,32 @@ public class RegistratinTest extends BaseClass {
 				"Registration failed: Cally image/logo not displayed.");
 	}
 
-//	@Test(priority = 2)
-//	public void testInvalidRegistration() throws InterruptedException {
-//		Reporter.log("Starting Invalid Registration Test", true);
-//
-//		RegistrationPage registrationPage = new RegistrationPage(driver);
-//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-//
-//		// Invalid data
-//		String userName = "testUser";
-//		String email = "invalidEmail";   
-//		String password = "123";        
-//		String mobile = "abc123";    
-//
-//		// Fill form
-//		registrationPage.fillRegistrationForm(userName, email, password, mobile);
-//
-//		// CAPTCHA, accept T&C, submit
-//		registrationPage.handleRecaptcha(driver);
-//		Thread.sleep(20000);
-//		registrationPage.setAccept();
-//		registrationPage.clickSignupButton();
-//
-//		// Verify error message is displayed
-//		Assert.assertTrue(registrationPage.verifyErrMsgIsDisplayed(wait),
-//				"Error message not displayed for invalid registration.");
-//	}
+	@Test(priority = 2)
+	public void testInvalidRegistration() throws InterruptedException {
+		Reporter.log("Starting Invalid Registration Test", true);
+
+		RegistrationPage registrationPage = new RegistrationPage(driver);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+
+		// Invalid data
+		String userName = "testUser";
+		String email = "invalidEmail";   
+		String password = "123";        
+		String mobile = "abc123";    
+
+		// Fill form
+		registrationPage.fillRegistrationForm(userName, email, password, mobile);
+
+		// CAPTCHA, accept T&C, submit
+		registrationPage.handleRecaptcha(driver);
+		Thread.sleep(20000);
+		registrationPage.setAccept();
+		registrationPage.clickSignupButton();
+
+		// Verify error message is displayed
+		Assert.assertTrue(registrationPage.verifyErrMsgIsDisplayed(wait),
+				"Error message not displayed for invalid registration.");
+	}
 
 }
 
