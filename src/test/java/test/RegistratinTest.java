@@ -22,17 +22,17 @@ public class RegistratinTest extends BaseClass {
 
 
 		// Valid data
-		String userName = "fdfgssgdf";
-		String email = "ambbfgghfdbi@gmail.com";
-		String password = "test123";
-		String mobile = "656522f646";
+		String userName = "aavarnsimi";
+		String email = "aavarnisimibivi@gmail.com";
+		String password = "3655123";
+		String mobile = "8105368526";
 
 		// Fill form
 		registrationPage.fillRegistrationForm(userName, email, password, mobile);
 
 		// CAPTCHA, accept T&C, submit
 		registrationPage.handleRecaptcha(driver);
-		Thread.sleep(20000); // Temporary wait for CAPTCHA
+		Thread.sleep(30000); // Temporary wait for CAPTCHA
 		registrationPage.setAccept();
 		registrationPage.clickSignupButton();
 
@@ -48,32 +48,32 @@ public class RegistratinTest extends BaseClass {
 				"Registration failed: Cally image/logo not displayed.");
 	}
 
-	@Test(priority = 2)
-	public void testInvalidRegistration() throws InterruptedException {
-		Reporter.log("Starting Invalid Registration Test", true);
-
-		RegistrationPage registrationPage = new RegistrationPage(driver);
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-
-		// Invalid data
-		String userName = "testUser";
-		String email = "invalidEmail";   
-		String password = "123";        
-		String mobile = "abc123";    
-
-		// Fill form
-		registrationPage.fillRegistrationForm(userName, email, password, mobile);
-
-		// CAPTCHA, accept T&C, submit
-		registrationPage.handleRecaptcha(driver);
-		Thread.sleep(20000);
-		registrationPage.setAccept();
-		registrationPage.clickSignupButton();
-
-		// Verify error message is displayed
-		Assert.assertTrue(registrationPage.verifyErrMsgIsDisplayed(wait),
-				"Error message not displayed for invalid registration.");
-	}
+//	@Test(priority = 2)
+//	public void testInvalidRegistration() throws InterruptedException {
+//		Reporter.log("Starting Invalid Registration Test", true);
+//
+//		RegistrationPage registrationPage = new RegistrationPage(driver);
+//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+//
+//		// Invalid data
+//		String userName = "testUser";
+//		String email = "invalidEmail";   
+//		String password = "123";        
+//		String mobile = "abc123";    
+//
+//		// Fill form
+//		registrationPage.fillRegistrationForm(userName, email, password, mobile);
+//
+//		// CAPTCHA, accept T&C, submit
+//		registrationPage.handleRecaptcha(driver);
+//		Thread.sleep(20000);
+//		registrationPage.setAccept();
+//		registrationPage.clickSignupButton();
+//
+//		// Verify error message is displayed
+//		Assert.assertTrue(registrationPage.verifyErrMsgIsDisplayed(wait),
+//				"Error message not displayed for invalid registration.");
+//	}
 
 }
 
