@@ -52,7 +52,7 @@ public class AgentPage {
     @FindBy(xpath = "//button[@class=\"confirm\"]")  
     private WebElement conformBTN;
     
-  //Add Agent Details 	
+  //Add Agent Details and Submit	
     public void addAgent(String name, String mobile, String email, String password) {
         nameTB.sendKeys(name);
         mobileTB.sendKeys(mobile);
@@ -63,7 +63,7 @@ public class AgentPage {
 		wait.until(ExpectedConditions.elementToBeClickable(conformBTN)).click();
       
     }
-//Verify added Agent is present in below table	
+//Validate if the agent is added successfully
     
     public boolean verifyAgentAdded(String expectedName, String expectedEmail) {
         String actualName = agentName.getText();

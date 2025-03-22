@@ -106,7 +106,7 @@ public class BaseClass {
 	public void postCondition(ITestResult result) throws Exception
 	{
 		
-	Thread.sleep(20000);;
+	    Thread.sleep(20000);
 		Reporter.log("Close the browser",true);
 		driver.quit();
 	}

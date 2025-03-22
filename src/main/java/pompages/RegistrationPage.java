@@ -13,38 +13,27 @@ public class RegistrationPage {
 	
 	@FindBy(id="txtName")
 	private WebElement unTB;
-
 	@FindBy(id="txtEmail")
 	private WebElement emailTB;
-
 	@FindBy(id="txtPassword")
 	private WebElement pwTB;
-
 	@FindBy(id="txt_mobile")
 	private WebElement mbTB;
-
-
 	@FindBy(xpath = "//iframe[contains(@title,'reCAPTCHA')]")
 	private WebElement recaptchaIframe;
-
 	@FindBy(xpath = "//div[@class='recaptcha-checkbox-border']")
 	private WebElement recaptchaCheckbox;
-
-	
-
 	@FindBy(id="checkbox-signup")
 	private WebElement acceptCB;
-
 	@FindBy(id="btnSignUp")
 	private WebElement signupBTN;
-	
 	@FindBy(xpath = "//h1[contains(text(),'Try Calley for Free')]")
 	WebElement heading;
-	
-	
 	@FindBy(xpath = "//div[@class=\"sa-icon sa-warning pulseWarning\"]")
 	WebElement errMsg;
-	
+	@FindBy(xpath = "//button[@class=\"confirm\"]")
+	WebElement otpBtn;
+
 
 	public RegistrationPage(WebDriver driver)
 	{
@@ -52,57 +41,34 @@ public class RegistrationPage {
 		PageFactory.initElements(driver,this);
 
 	}
-
-	public void setUserName(String un)
-	{
-		unTB.sendKeys(un);
+//Enter required details (e.g., Name, Email, Phone, Password, 
+	public void fillRegistrationForm(String userName, String email, String password, String mobile) {
+	    unTB.sendKeys(userName);
+	    emailTB.sendKeys(email);
+	    pwTB.sendKeys(password);
+	    mbTB.sendKeys(mobile);
 	}
 
-	public void setEmail(String email)
-	{
-		emailTB.sendKeys(email);
-	}
+//Clicking Captcha
 
-	public void setPassword(String pw)
-	{
-		pwTB.sendKeys(pw);
-	}
-
-	public void setMobile(String mn)
-	{
-		mbTB.sendKeys(mn);
-	}
-
-
-	
-	
 	public void handleRecaptcha(WebDriver driver) {
-
 		driver.switchTo().frame(recaptchaIframe);
-
-
 		recaptchaCheckbox.click();
-
-
 		driver.switchTo().defaultContent();
-
 	}
-
+//Click Accept
 	public void setAccept() 
-
 	{
-
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-
-		js.executeScript("arguments[0].click();",acceptCB);
-
+		js.executeScript("arguments[0].click();",acceptCB);		
 	}
-
-
+//Click SignUP
 	public void clickSignupButton()
 	{
 		signupBTN.click();
 	}
+
+//Verification	
 	public boolean verifyErrMsgIsDisplayed(WebDriverWait wait )
 	{
 		try

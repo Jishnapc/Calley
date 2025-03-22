@@ -44,7 +44,7 @@ public class FullSetupTest extends BaseClass {
 	        boolean isDashboardVisible = dashboardPage.verifyDashBoardPageIsDisplayed(wait);
 	        Assert.assertTrue(isDashboardVisible, "Dashboard should be visible after valid login");
 
-	        // Add Agent
+	        // Navigate to the agent page.
 	        dashboardPage.hoverOverTeams();
 	        dashboardPage.clickAgent();
 
@@ -57,7 +57,7 @@ public class FullSetupTest extends BaseClass {
 	        agentPage.addAgent(agentName, mobile, agentEmail, agentPassword);
 	        Assert.assertTrue(agentPage.verifyAgentAdded(agentName, agentEmail), "Agent was not added successfully.");
 
-	        // Upload CSV
+	        // Navigate to Call List > Power Import.
 	        dashboardPage.hoverOverCallList();
 	        dashboardPage.clickPowerImport();
 
