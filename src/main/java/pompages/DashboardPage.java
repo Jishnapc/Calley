@@ -20,7 +20,7 @@ public class DashboardPage {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	}
 
-	@FindBy(id="ContentPlaceHolder1_lbl_title")
+	@FindBy(xpath="//img[@src=\"images/mobile-logo.png\"]")
 	private WebElement dashboard;
 	@FindBy(xpath="//span[text()=\"Team\"]")
 	private WebElement dropDownMenu;

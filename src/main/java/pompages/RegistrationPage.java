@@ -28,19 +28,25 @@ public class RegistrationPage {
 	@FindBy(id="btnSignUp")
 	private WebElement signupBTN;
 	@FindBy(xpath = "//h1[contains(text(),'Try Calley for Free')]")
-	WebElement heading;
+	private WebElement heading;
 	@FindBy(xpath = "//div[@class=\"sa-icon sa-warning pulseWarning\"]")
-	WebElement errMsg;
+	private WebElement errMsg;
 	@FindBy(xpath = "//button[@class=\"confirm\"]")
-	WebElement otpBtn;
+	private WebElement otpBtn;
 
-
+	
+	@FindBy(id="cmdsinup")
+	private WebElement signupLink;
+	
 	public RegistrationPage(WebDriver driver)
+	
 	{
 		this.driver = (JavascriptExecutor) driver;
 		PageFactory.initElements(driver,this);
 
 	}
+
+	
 //Enter required details (e.g., Name, Email, Phone, Password, 
 	public void fillRegistrationForm(String userName, String email, String password, String mobile) {
 	    unTB.sendKeys(userName);
@@ -83,4 +89,11 @@ public class RegistrationPage {
      		return false;
 		}
 	}
+	
+	
+//	//Redirected to RegistrationPage from Login Page
+//	public void clickSignUpLinkk() {
+//		signupLink.click();
+//		
+//	}
 	}

@@ -18,14 +18,18 @@ public class RegistratinTest extends BaseClass {
 	public void testValidRegistration() throws InterruptedException {
 		Reporter.log("Starting Valid Registration Test", true);
 		wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		
+		
 		RegistrationPage registrationPage = new RegistrationPage(driver);
 
-
+//		registrationPage.clickSignUpLinkk();
+		
+		
 		// Valid data
-		String userName = "aavarnsimi";
-		String email = "aavarnisimibivi@gmail.com";
+		String userName = "siminm";
+		String email = "simibivi@gmail.com";
 		String password = "3655123";
-		String mobile = "8105368526";
+		String mobile = "8105879624";
 
 		// Fill form
 		registrationPage.fillRegistrationForm(userName, email, password, mobile);

@@ -2,9 +2,6 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[Execute in Grid:no]]>
-    </line>
-    <line>
       <![CDATA[Browser is:chrome]]>
     </line>
     <line>
@@ -24,9 +21,6 @@
     </line>
     <line>
       <![CDATA[Close the browser]]>
-    </line>
-    <line>
-      <![CDATA[Execute in Grid:no]]>
     </line>
     <line>
       <![CDATA[Browser is:chrome]]>
@@ -50,43 +44,30 @@
       <![CDATA[Close the browser]]>
     </line>
   </reporter-output>
-  <suite started-at="2025-03-22T17:03:29 IST" name="Default suite" finished-at="2025-03-22T17:04:48 IST" duration-ms="78742">
+  <suite started-at="2025-03-26T09:43:27 IST" name="Default suite" finished-at="2025-03-26T09:44:17 IST" duration-ms="50084">
     <groups>
     </groups>
-    <test started-at="2025-03-22T17:03:29 IST" name="Default test" finished-at="2025-03-22T17:04:48 IST" duration-ms="78742">
+    <test started-at="2025-03-26T09:43:27 IST" name="Default test" finished-at="2025-03-26T09:44:17 IST" duration-ms="50084">
       <class name="test.FullSetupTest">
-        <test-method is-config="true" signature="preCondition(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:test.FullSetupTest@4c371370]" started-at="2025-03-22T17:03:29 IST" name="preCondition" finished-at="2025-03-22T17:03:35 IST" duration-ms="6149" status="PASS">
+        <test-method is-config="true" signature="preCondition(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:test.FullSetupTest@18078bef]" started-at="2025-03-26T09:43:27 IST" name="preCondition" finished-at="2025-03-26T09:43:32 IST" duration-ms="4937" status="PASS">
           <params>
             <param index="0">
-              <value>
-                <![CDATA[no]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[https://oauth-jishna.pc-13467:1e28c5da-c51e-44c3-93c4-26c352300941@ondemand.eu-central-1.saucelabs.com:443/wd/hub]]>
-              </value>
-            </param>
-            <param index="2">
               <value>
                 <![CDATA[chrome]]>
               </value>
             </param>
-            <param index="3">
+            <param index="1">
               <value>
                 <![CDATA[7]]>
               </value>
             </param>
-            <param index="4">
+            <param index="2">
               <value>
                 <![CDATA[6]]>
               </value>
             </param>
           </params>
           <reporter-output>
-            <line>
-              <![CDATA[Execute in Grid:no]]>
-            </line>
             <line>
               <![CDATA[Browser is:chrome]]>
             </line>
@@ -104,7 +85,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- preCondition -->
-        <test-method signature="testLoginFlow(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:test.FullSetupTest@4c371370]" started-at="2025-03-22T17:03:35 IST" name="testLoginFlow" data-provider="loginScenarios" finished-at="2025-03-22T17:04:01 IST" duration-ms="26025" status="PASS">
+        <test-method signature="testLoginFlow(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:test.FullSetupTest@18078bef]" started-at="2025-03-26T09:43:32 IST" name="testLoginFlow" data-provider="loginScenarios" finished-at="2025-03-26T09:44:04 IST" duration-ms="32532" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -123,7 +104,7 @@
             </param>
             <param index="3">
               <value>
-                <![CDATA[SampleTestList4]]>
+                <![CDATA[TestLis1]]>
               </value>
             </param>
             <param index="4">
@@ -138,11 +119,11 @@
             </line>
           </reporter-output>
         </test-method> <!-- testLoginFlow -->
-        <test-method is-config="true" signature="postCondition(org.testng.ITestResult)[pri:0, instance:test.FullSetupTest@4c371370]" started-at="2025-03-22T17:04:01 IST" name="postCondition" finished-at="2025-03-22T17:04:21 IST" duration-ms="20410" status="PASS">
+        <test-method is-config="true" signature="postCondition(org.testng.ITestResult)[pri:0, instance:test.FullSetupTest@18078bef]" started-at="2025-03-26T09:44:04 IST" name="postCondition" finished-at="2025-03-26T09:44:07 IST" duration-ms="2503" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testLoginFlow status=SUCCESS method=FullSetupTest.testLoginFlow(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:test.FullSetupTest@4c371370] output=Running Login Scenario: valid]]]>
+                <![CDATA[[TestResult name=testLoginFlow status=SUCCESS method=FullSetupTest.testLoginFlow(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:test.FullSetupTest@18078bef] output=Running Login Scenario: valid]]]>
               </value>
             </param>
           </params>
@@ -152,38 +133,25 @@
             </line>
           </reporter-output>
         </test-method> <!-- postCondition -->
-        <test-method is-config="true" signature="preCondition(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:test.FullSetupTest@4c371370]" started-at="2025-03-22T17:04:21 IST" name="preCondition" finished-at="2025-03-22T17:04:26 IST" duration-ms="4423" status="PASS">
+        <test-method is-config="true" signature="preCondition(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:test.FullSetupTest@18078bef]" started-at="2025-03-26T09:44:07 IST" name="preCondition" finished-at="2025-03-26T09:44:12 IST" duration-ms="5714" status="PASS">
           <params>
             <param index="0">
-              <value>
-                <![CDATA[no]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[https://oauth-jishna.pc-13467:1e28c5da-c51e-44c3-93c4-26c352300941@ondemand.eu-central-1.saucelabs.com:443/wd/hub]]>
-              </value>
-            </param>
-            <param index="2">
               <value>
                 <![CDATA[chrome]]>
               </value>
             </param>
-            <param index="3">
+            <param index="1">
               <value>
                 <![CDATA[7]]>
               </value>
             </param>
-            <param index="4">
+            <param index="2">
               <value>
                 <![CDATA[6]]>
               </value>
             </param>
           </params>
           <reporter-output>
-            <line>
-              <![CDATA[Execute in Grid:no]]>
-            </line>
             <line>
               <![CDATA[Browser is:chrome]]>
             </line>
@@ -201,7 +169,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- preCondition -->
-        <test-method signature="testLoginFlow(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:test.FullSetupTest@4c371370]" started-at="2025-03-22T17:04:26 IST" name="testLoginFlow" data-provider="loginScenarios" finished-at="2025-03-22T17:04:27 IST" duration-ms="1369" status="PASS">
+        <test-method signature="testLoginFlow(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:test.FullSetupTest@18078bef]" started-at="2025-03-26T09:44:12 IST" name="testLoginFlow" data-provider="loginScenarios" finished-at="2025-03-26T09:44:14 IST" duration-ms="1962" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -235,11 +203,11 @@
             </line>
           </reporter-output>
         </test-method> <!-- testLoginFlow -->
-        <test-method is-config="true" signature="postCondition(org.testng.ITestResult)[pri:0, instance:test.FullSetupTest@4c371370]" started-at="2025-03-22T17:04:27 IST" name="postCondition" finished-at="2025-03-22T17:04:48 IST" duration-ms="20318" status="PASS">
+        <test-method is-config="true" signature="postCondition(org.testng.ITestResult)[pri:0, instance:test.FullSetupTest@18078bef]" started-at="2025-03-26T09:44:14 IST" name="postCondition" finished-at="2025-03-26T09:44:17 IST" duration-ms="2372" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testLoginFlow status=SUCCESS method=FullSetupTest.testLoginFlow(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:test.FullSetupTest@4c371370] output=Running Login Scenario: invalid]]]>
+                <![CDATA[[TestResult name=testLoginFlow status=SUCCESS method=FullSetupTest.testLoginFlow(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:test.FullSetupTest@18078bef] output=Running Login Scenario: invalid]]]>
               </value>
             </param>
           </params>

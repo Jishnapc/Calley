@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <parameter name="ETO" value="9"/>
+    <parameter name="ITO" value="10"/>
+    <parameter name="grid" value="no"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="gridURL" value="https://oauth-jishna.pc-13467:1e28c5da-c51e-44c3-93c4-26c352300941@ondemand.eu-central-1.saucelabs.com:443/wd/hub"/>
+    <parameter name="appURL" value="https://app.getcalley.com/registration.aspx"/>
     <classes>
-      <class name="test.FullSetupTest">
+      <class name="test.RegistratinTest">
         <methods>
-          <include name="testLoginFlow" invocation-numbers="0"/>
+          <include name="testInvalidRegistration"/>
           <include name="preCondition"/>
+          <include name="testValidRegistration"/>
           <include name="postCondition"/>
         </methods>
-      </class> <!-- test.FullSetupTest -->
+      </class> <!-- test.RegistratinTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
