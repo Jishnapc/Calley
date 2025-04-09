@@ -62,13 +62,13 @@ public class BaseClass {
 		Reporter.log("Set ITO:"+ITO,true);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Integer.valueOf(ITO)));
 
-//			String appURL=Utility.getProperty("src\\main\\resources\\resources.properties", "app_url");
-//			Reporter.log("Enter the URL:"+appURL,true);
-//			driver.get(appURL);
+			String appURL=Utility.getProperty("src\\main\\resources\\resources.properties", "app_url");
+			Reporter.log("Enter the URL:"+appURL,true);
+			driver.get(appURL);
 		
-		String apploginURL=Utility.getProperty("src\\main\\resources\\resources.properties", "applogin_url");
-		Reporter.log("Enter the URL:"+apploginURL,true);
-		driver.get(apploginURL);
+//		String apploginURL=Utility.getProperty("src\\main\\resources\\resources.properties", "applogin_url");
+//		Reporter.log("Enter the URL:"+apploginURL,true);
+//		driver.get(apploginURL);
 
 
 		Reporter.log("Maximize the browser",true);

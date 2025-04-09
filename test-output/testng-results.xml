@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[Browser is:chrome]]>
@@ -8,7 +8,7 @@
       <![CDATA[Set ITO:7]]>
     </line>
     <line>
-      <![CDATA[Enter the URL:https://app.getcalley.com/Login.aspx]]>
+      <![CDATA[Enter the URL:https://app.getcalley.com/registration.aspx]]>
     </line>
     <line>
       <![CDATA[Maximize the browser]]>
@@ -17,39 +17,18 @@
       <![CDATA[Set ETO:6]]>
     </line>
     <line>
-      <![CDATA[Running Login Scenario: valid]]>
-    </line>
-    <line>
-      <![CDATA[Close the browser]]>
-    </line>
-    <line>
-      <![CDATA[Browser is:chrome]]>
-    </line>
-    <line>
-      <![CDATA[Set ITO:7]]>
-    </line>
-    <line>
-      <![CDATA[Enter the URL:https://app.getcalley.com/Login.aspx]]>
-    </line>
-    <line>
-      <![CDATA[Maximize the browser]]>
-    </line>
-    <line>
-      <![CDATA[Set ETO:6]]>
-    </line>
-    <line>
-      <![CDATA[Running Login Scenario: invalid]]>
+      <![CDATA[Starting Valid Registration Test]]>
     </line>
     <line>
       <![CDATA[Close the browser]]>
     </line>
   </reporter-output>
-  <suite started-at="2025-03-26T09:43:27 IST" name="Default suite" finished-at="2025-03-26T09:44:17 IST" duration-ms="50084">
+  <suite started-at="2025-03-26T16:29:46 IST" name="Default suite" finished-at="2025-03-26T16:31:07 IST" duration-ms="81558">
     <groups>
     </groups>
-    <test started-at="2025-03-26T09:43:27 IST" name="Default test" finished-at="2025-03-26T09:44:17 IST" duration-ms="50084">
-      <class name="test.FullSetupTest">
-        <test-method is-config="true" signature="preCondition(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:test.FullSetupTest@18078bef]" started-at="2025-03-26T09:43:27 IST" name="preCondition" finished-at="2025-03-26T09:43:32 IST" duration-ms="4937" status="PASS">
+    <test started-at="2025-03-26T16:29:46 IST" name="Default test" finished-at="2025-03-26T16:31:07 IST" duration-ms="81558">
+      <class name="test.RegistratinTest">
+        <test-method is-config="true" signature="preCondition(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:test.RegistratinTest@1bd4fdd]" started-at="2025-03-26T16:29:46 IST" name="preCondition" finished-at="2025-03-26T16:30:00 IST" duration-ms="14089" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -75,7 +54,7 @@
               <![CDATA[Set ITO:7]]>
             </line>
             <line>
-              <![CDATA[Enter the URL:https://app.getcalley.com/Login.aspx]]>
+              <![CDATA[Enter the URL:https://app.getcalley.com/registration.aspx]]>
             </line>
             <line>
               <![CDATA[Maximize the browser]]>
@@ -85,45 +64,18 @@
             </line>
           </reporter-output>
         </test-method> <!-- preCondition -->
-        <test-method signature="testLoginFlow(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:test.FullSetupTest@18078bef]" started-at="2025-03-26T09:43:32 IST" name="testLoginFlow" data-provider="loginScenarios" finished-at="2025-03-26T09:44:04 IST" duration-ms="32532" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[jishna.abhilash86@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[123456]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[valid]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[TestLis1]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[C:\Users\jishnaabhilash\Downloads\Sample File cCopy.csv]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="testValidRegistration()[pri:1, instance:test.RegistratinTest@1bd4fdd]" started-at="2025-03-26T16:30:00 IST" name="testValidRegistration" finished-at="2025-03-26T16:31:04 IST" duration-ms="64723" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[Running Login Scenario: valid]]>
+              <![CDATA[Starting Valid Registration Test]]>
             </line>
           </reporter-output>
-        </test-method> <!-- testLoginFlow -->
-        <test-method is-config="true" signature="postCondition(org.testng.ITestResult)[pri:0, instance:test.FullSetupTest@18078bef]" started-at="2025-03-26T09:44:04 IST" name="postCondition" finished-at="2025-03-26T09:44:07 IST" duration-ms="2503" status="PASS">
+        </test-method> <!-- testValidRegistration -->
+        <test-method is-config="true" signature="postCondition(org.testng.ITestResult)[pri:0, instance:test.RegistratinTest@1bd4fdd]" started-at="2025-03-26T16:31:04 IST" name="postCondition" finished-at="2025-03-26T16:31:07 IST" duration-ms="2671" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testLoginFlow status=SUCCESS method=FullSetupTest.testLoginFlow(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:test.FullSetupTest@18078bef] output=Running Login Scenario: valid]]]>
+                <![CDATA[[TestResult name=testValidRegistration status=SUCCESS method=RegistratinTest.testValidRegistration()[pri:1, instance:test.RegistratinTest@1bd4fdd] output=Starting Valid Registration Test]]]>
               </value>
             </param>
           </params>
@@ -133,91 +85,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- postCondition -->
-        <test-method is-config="true" signature="preCondition(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:test.FullSetupTest@18078bef]" started-at="2025-03-26T09:44:07 IST" name="preCondition" finished-at="2025-03-26T09:44:12 IST" duration-ms="5714" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[7]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[6]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-            <line>
-              <![CDATA[Browser is:chrome]]>
-            </line>
-            <line>
-              <![CDATA[Set ITO:7]]>
-            </line>
-            <line>
-              <![CDATA[Enter the URL:https://app.getcalley.com/Login.aspx]]>
-            </line>
-            <line>
-              <![CDATA[Maximize the browser]]>
-            </line>
-            <line>
-              <![CDATA[Set ETO:6]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- preCondition -->
-        <test-method signature="testLoginFlow(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:test.FullSetupTest@18078bef]" started-at="2025-03-26T09:44:12 IST" name="testLoginFlow" data-provider="loginScenarios" finished-at="2025-03-26T09:44:14 IST" duration-ms="1962" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[wrong@email.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[wrongpass]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[invalid]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-            <line>
-              <![CDATA[Running Login Scenario: invalid]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- testLoginFlow -->
-        <test-method is-config="true" signature="postCondition(org.testng.ITestResult)[pri:0, instance:test.FullSetupTest@18078bef]" started-at="2025-03-26T09:44:14 IST" name="postCondition" finished-at="2025-03-26T09:44:17 IST" duration-ms="2372" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=testLoginFlow status=SUCCESS method=FullSetupTest.testLoginFlow(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:test.FullSetupTest@18078bef] output=Running Login Scenario: invalid]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-            <line>
-              <![CDATA[Close the browser]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- postCondition -->
-      </class> <!-- test.FullSetupTest -->
+      </class> <!-- test.RegistratinTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -19,6 +19,9 @@ public class RegistrationVerifyPage {
 	private WebElement verifyBTN;
 	@FindBy(xpath="//h2[contains(text(),'Try Calley for Free')]")
 	private WebElement imgCally;
+	@FindBy(id="ancPop2")
+	private WebElement freeTrialBTN;
+	
 	
 public boolean verifyCallyImageDisplayed(WebDriverWait wait) {
 		try
@@ -34,13 +37,19 @@ public boolean verifyCallyImageDisplayed(WebDriverWait wait) {
 	}
 }
 
-//OTP	
-	public void clickVerify(WebDriverWait wait) {
-	    wait.until(ExpectedConditions.elementToBeClickable(verifyBTN)).click();
-	}
+//Verify	
+//	public void clickVerify(WebDriverWait wait) throws InterruptedException {
+//		Thread.sleep(2000);;
+//	    wait.until(ExpectedConditions.elementToBeClickable(verifyBTN)).click();
+//	    Thread.sleep(2000);
+//	    freeTrialBTN.click();
+//	    
+//	}
 
-//verify
-	public void clickOTPOk(WebDriverWait wait) {
-		 wait.until(ExpectedConditions.elementToBeClickable(otpOKBtn)).click();		
-	}	
+////otp
+//	public void clickOTPOk(WebDriverWait wait) throws InterruptedException {
+//		 wait.until(ExpectedConditions.elementToBeClickable(otpOKBtn)).click();		
+//		 Thread.sleep(2000);
+//		  freeTrialBTN.click();
+//	}	
 }

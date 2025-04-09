@@ -18,7 +18,7 @@ public class FullSetupTest extends BaseClass {
 	@DataProvider(name = "loginScenarios")
     public Object[][] getLoginScenarios() {
         return new Object[][] {
-            { "jishna.abhilash86@gmail.com", "123456", "valid", "TestLis1", "C:\\Users\\jishnaabhilash\\Downloads\\Sample File cCopy.csv" },
+            { "jishna.abhilash86@gmail.com", "123456", "valid", "SmapleTestLis2", "C:\\Users\\jishnaabhilash\\Downloads\\Sample File cCopy.csv" },
             { "wrong@email.com", "wrongpass", "invalid","",""}
         };
 	 }

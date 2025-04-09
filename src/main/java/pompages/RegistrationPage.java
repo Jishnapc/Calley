@@ -33,10 +33,15 @@ public class RegistrationPage {
 	private WebElement errMsg;
 	@FindBy(xpath = "//button[@class=\"confirm\"]")
 	private WebElement otpBtn;
+	@FindBy(id="ancPop2")
+	private WebElement freeTrialBTN;
 
 	
 	@FindBy(id="cmdsinup")
+	
 	private WebElement signupLink;
+	@FindBy(id="btnteamsplanactive")
+	private WebElement freeTrialPopupBTN;
 	
 	public RegistrationPage(WebDriver driver)
 	
@@ -69,9 +74,16 @@ public class RegistrationPage {
 		js.executeScript("arguments[0].click();",acceptCB);		
 	}
 //Click SignUP
-	public void clickSignupButton()
+	public void clickSignupButton() throws InterruptedException
 	{
 		signupBTN.click();
+		Thread.sleep(2000);
+		otpBtn.click();
+//		 wait.until(ExpectedConditions.elementToBeClickable(otpOKBtn)).click();		
+		 Thread.sleep(2000);
+		  freeTrialBTN.click();
+		  freeTrialPopupBTN.click();
+		
 	}
 
 //Verification	
